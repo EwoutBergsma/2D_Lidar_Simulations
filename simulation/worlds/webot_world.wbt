@@ -1,0 +1,38 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/robotis/turtlebot/protos/TurtleBot3Burger.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/devices/robotis/protos/RobotisLds01.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/chairs/protos/Chair.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.10084883625624372 0.009030523790187574 -0.9948607751167177 2.963863802779144
+  position 3.747765758589758 1.3209749317443449 0.9881818504936173
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 3 3
+}
+TurtleBot3Burger {
+  translation 0 0.6 0
+  controller "my_controller"
+  extensionSlot [
+    RobotisLds01 {
+      rotation 1 0 0 0
+    }
+    RobotisLds01 {
+      translation 0 0 0.1
+      rotation 1 0 0 1.57079633
+      name "LDS-02"
+    }
+  ]
+}
+Chair {
+}
