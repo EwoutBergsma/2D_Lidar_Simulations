@@ -10,8 +10,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.10084883625624372 0.009030523790187574 -0.9948607751167177 2.963863802779144
-  position 3.747765758589758 1.3209749317443449 0.9881818504936173
+  orientation -0.08025109777377373 -0.03946944196720989 0.995992933939243 4.052622994325828
+  position 2.695105070024727 3.300105543603716 0.9328398897430674
 }
 TexturedBackground {
 }
@@ -21,14 +21,17 @@ RectangleArena {
   floorSize 3 3
 }
 TurtleBot3Burger {
-  translation 0 0.6 0
+  translation 1 1 0
+  rotation 0 0 1 0
   controller "my_controller"
+  supervisor TRUE
   extensionSlot [
-    RobotisLds01 {
+    DEF lds_01 RobotisLds01 {
+      translation 1 0 0
       rotation 1 0 0 0
     }
-    RobotisLds01 {
-      translation 0 0 0.1
+    DEF lds_02 RobotisLds01 {
+      translation 0 1 0
       rotation 1 0 0 1.57079633
       name "LDS-02"
     }
