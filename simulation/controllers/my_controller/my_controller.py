@@ -45,5 +45,8 @@ while robot.step(timestep) != -1:
     # ewout.append(range_image)
     range_image = right_lidar.getRangeImage()
     # ewout.append(range_image)
+    # print(range_image)
+    print(robot.getTime())
+    # print(dir(robot))
     pass
 
